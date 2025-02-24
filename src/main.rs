@@ -68,7 +68,7 @@ fn main() {
 }
 
 fn send_request(prompt: &str) -> Result<String, reqwest::Error> {
-    let url = format!("https://gemicli.vercel.app/gemini?prompt={}", prompt);
+    let url = format!("https://gemicli-96vg.shuttle.app/gemini?prompt={}", prompt);
     let response = reqwest::blocking::get(&url)?;
     let response_text = response.text()?;
     Ok(response_text)
